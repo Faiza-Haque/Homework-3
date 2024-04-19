@@ -17,14 +17,14 @@ const collectEmployees = function () {
     let employee = {
       firstName: firstName,
       lastName: lastName,
-      salary: salary,
+      salary: Number (salary), 
 
 
     }
     employees.push(employee)
 
 entryloop = confirm ("Do you want to add another employee?")
-
+console.log ("entryloop", entryloop)
 
   }
 
@@ -37,11 +37,24 @@ return employees
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
+let sum = 0
+for (let i = 0; i < employeesArray.length; i++) {
+sum=sum+ employeesArray [i]
+
+
+}
+let average= sum/employeesArray.length
+console.log ("average", average)
+
+
 }
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
+
+  let random= Math.floor(Math.random() *employeesArray.length)
+ console.log("", employeesArray[random]);
 }
 
 /*
